@@ -1,0 +1,24 @@
+h3{
+    font-size: 25px !important;
+  }
+  body{
+    background-image: url("background.jpg");
+  }
+  .btn-success:hover{
+    background-color: black;
+  }
+
+  canvas{
+    animation-name: luz;
+    animation-duration: 4s;
+    animation-iteration-count:infinite
+  }
+
+  @keyframes luz {
+    from{
+        box-shadow: 50px 1px 100px blue;
+    }
+        to{
+            box-shadow: 1px 50px 40px green;
+        }
+  }
