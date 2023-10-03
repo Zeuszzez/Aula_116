@@ -3,15 +3,15 @@ var noseY = 0;
 
 //Funções P5
 
-function preLoad() {
+function preload() {
     nose = loadImage('nose.png')
 }
 
 function draw() {
     image(webcam, 0, 0, 500, 500)
-    //circle( noseX, noseY, 40)
-    //fill("red")
-    image(nose, noseX, noseY,30,30)
+    circle( noseX, noseY, 40)
+    fill("red")
+    image(nose, noseX-28, noseY-28,55,55)
 }
 
 function setup() {
@@ -37,4 +37,8 @@ function gotPoses(results) {
         noseX = +results[0].pose.nose.x
         noseY = +results[0].pose.nose.y
     }
+}
+
+function tirarFoto(){
+    save("foto.jpg")
 }
